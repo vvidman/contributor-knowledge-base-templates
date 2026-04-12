@@ -1,0 +1,7 @@
+category: architecture
+last_updated: "YYYY-MM-DD"
+documents:
+  - path: "docs/architecture/clean-architecture.md"
+    covers: ["layers", "dependency rule", "use cases", "boundaries", "ports and adapters"]
+  - path: "docs/architecture/solid.md"
+    covers: ["SRP", "OCP", "LSP", "ISP", "DIP", "single responsibility", "open closed"]

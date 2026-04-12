@@ -1,12 +1,4 @@
----
-category: architecture
-last_updated: "YYYY-MM-DD"
-documents:
-  - file: clean-architecture.md
-    covers: ["layers", "dependency rule", "use cases", "boundaries", "ports and adapters"]
-  - file: solid.md
-    covers: ["SRP", "OCP", "LSP", "ISP", "DIP", "single responsibility", "open closed"]
----
+> **Human navigation.** AI agents: use `docs/architecture/index.yaml` — do not read this file for navigation.
 
 # Architecture Principles
 
@@ -19,15 +11,15 @@ When an ADR conflicts with an architecture principle, the ADR takes precedence.
 ## Documents
 
 ### `clean-architecture.md`
-Layer structure, dependency direction, and how domain, application, and infrastructure concerns are separated.
-Load when: reasoning about where code belongs, reviewing layer boundaries, questioning dependency direction.
+Layer structure, dependency direction, boundaries, and use cases.
+Load when: reasoning about where code belongs or how layers should communicate.
 
 ### `solid.md`
-How the five SOLID principles are applied and enforced in this codebase.
-Load when: designing new classes or interfaces, reviewing object-oriented design decisions.
+How SOLID principles are applied in this project.
+Load when: reviewing design decisions, evaluating class or interface design.
 
 ---
 
 ## Adding a New Architecture Document
-Copy `_template.md` to a new file named after the principle or pattern (e.g. `cqrs.md`, `event-driven.md`).
-Add the new file to the `documents` list in this README's frontmatter.
+Copy `_template.md` to a new file named after the principle or pattern.
+Add the new file to the `documents` list in `index.yaml`.

@@ -1,0 +1,7 @@
+category: toolchain
+last_updated: "YYYY-MM-DD"
+documents:
+  - path: "docs/toolchain/docker.md"
+    covers: ["docker", "containers", "compose", "local dev environment"]
+  - path: "docs/toolchain/ci-cd.md"
+    covers: ["ci", "cd", "pipeline", "build", "deploy", "github actions"]

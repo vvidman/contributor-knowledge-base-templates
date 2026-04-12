@@ -1,12 +1,4 @@
----
-category: toolchain
-last_updated: "YYYY-MM-DD"
-documents:
-  - file: docker.md
-    covers: ["docker", "containers", "compose", "local dev environment"]
-  - file: ci-cd.md
-    covers: ["ci", "cd", "pipeline", "build", "deploy", "github actions"]
----
+> **Human navigation.** AI agents: use `docs/toolchain/index.yaml` — do not read this file for navigation.
 
 # Toolchain
 
@@ -20,11 +12,11 @@ Container setup, local dev workflow, image build process.
 Load when: setting up locally, modifying Docker config, debugging container issues.
 
 ### `ci-cd.md`
-Pipeline structure, deployment process, environment configs.
-Load when: modifying CI config, setting up a new environment, debugging pipeline failures.
+Pipeline configuration, deployment steps, environment variables.
+Load when: modifying the build pipeline, setting up a new environment, debugging CI failures.
 
 ---
 
 ## Adding a New Toolchain Document
-Copy `_template.md` to a new file named after the tool or concern (e.g. `vite.md`, `ef-migrations.md`).
-Add the new file to the `documents` list in this README's frontmatter.
+Copy `_template.md` to a new file named after the tool or process.
+Add the new file to the `documents` list in `index.yaml`.

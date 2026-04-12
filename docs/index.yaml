@@ -1,0 +1,23 @@
+version: "1.0"
+conflict_priority: ["adr", "domain", "architecture", "conventions", "toolchain"]
+# Specs are not ranked — they are consumed during implementation only, not as standing rules.
+
+categories:
+  conventions:
+    index: "docs/conventions/index.yaml"
+    triggers: ["code", "style", "lint", "format", "naming", "test", "convention"]
+  adr:
+    index: "docs/adr/index.yaml"
+    triggers: ["architecture", "decision", "pattern", "structure", "why", "approach"]
+  architecture:
+    index: "docs/architecture/index.yaml"
+    triggers: ["principle", "clean architecture", "solid", "design", "layer", "dependency"]
+  domain:
+    index: "docs/domain/index.yaml"
+    triggers: ["feature", "business logic", "entity", "rule", "domain"]
+  specs:
+    index: "docs/specs/index.yaml"
+    triggers: ["spec", "feature spec", "implement", "requirement", "scope"]
+  toolchain:
+    index: "docs/toolchain/index.yaml"
+    triggers: ["build", "deploy", "ci", "cd", "docker", "pipeline", "tooling"]

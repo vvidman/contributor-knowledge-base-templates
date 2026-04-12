@@ -1,0 +1,9 @@
+category: conventions
+last_updated: "YYYY-MM-DD"
+documents:
+  - path: "docs/conventions/typescript.md"
+    covers: ["types", "generics", "interfaces", "enums", "nullability", "strict mode"]
+  - path: "docs/conventions/testing.md"
+    covers: ["unit tests", "integration tests", "mocking", "coverage", "naming"]
+  - path: "docs/conventions/git.md"
+    covers: ["commit messages", "branch naming", "PR structure", "review etiquette"]

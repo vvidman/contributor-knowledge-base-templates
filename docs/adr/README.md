@@ -1,12 +1,4 @@
----
-category: adr
-last_updated: "YYYY-MM-DD"
-documents:
-  - file: 001-example.md
-    title: "Example Decision"
-    status: accepted
-    date: "YYYY-MM-DD"
----
+> **Human navigation.** AI agents: use `docs/adr/index.yaml` — do not read this file for navigation.
 
 # Architecture Decision Records
 
@@ -21,12 +13,11 @@ They are the **authoritative source** — if an ADR conflicts with a convention 
 
 ## Documents
 
-| # | Title | Status | Date |
-|---|-------|--------|------|
-| 001 | Example Decision | accepted | YYYY-MM-DD |
+### `001-example.md`
+Example ADR demonstrating structure and required fields.
 
 ---
 
 ## Adding a New ADR
-Copy `_template.md` to a new file with an incremented number and short slug: `002-short-description.md`.
-Update the `documents` table and frontmatter list in this README.
+Copy `_template.md` to a new file following the `NNN-short-title.md` naming convention.
+Add the new file to the `documents` list in `index.yaml`.

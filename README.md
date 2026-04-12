@@ -12,7 +12,7 @@ This repository is a **template** for setting up a layered contributor knowledge
 - **Human contributors** — onboarding, architectural guidance, coding standards, domain understanding
 - **AI coding assistants** — navigable, on-demand context loading to minimize unnecessary token usage
 
-The core idea is simple: an AI assistant should know *what exists* without having to load *everything*. Knowledge is organized into categories, each with a manifest (`README.md`) that describes what is inside. The assistant loads only what is relevant to the current task.
+The core idea is simple: an AI assistant should know *what exists* without having to load *everything*. Knowledge is organized into categories, each with a machine-readable navigation index (`index.yaml`) that lists what documents are inside and what keywords they cover. The assistant loads only what is relevant to the current task. Human contributors navigate the same structure via the `README.md` files in each directory.
 
 ---
 
@@ -24,14 +24,17 @@ The root instruction file is intentionally lean. It contains only what is *alway
 ### 2. Three-tier knowledge hierarchy
 ```
 Tier 1 — Root instruction file     (always loaded by the AI tool)
-Tier 2 — Category manifests        (loaded when a category is relevant)
+Tier 2 — Category indexes          (loaded when a category is relevant)
 Tier 3 — Specific knowledge files  (loaded only when directly needed)
 ```
+
+AI agents navigate tiers 2 and 3 exclusively via `index.yaml` files.
+Human contributors navigate the same structure via `README.md` files in each directory.
 
 This hierarchy keeps the working context small and precise.
 
 ### 3. Human and AI contributors are equal audiences
-Nothing in this structure is AI-only. Every document should be readable and useful to a human developer as well. The navigation protocol applies to both.
+Nothing in this structure is AI-only. Every knowledge document should be readable and useful to a human developer as well. The navigation layer is split by consumer: `index.yaml` files are for AI agents, `README.md` files are for humans — but they reference the same underlying knowledge documents.
 
 ### 4. Tool-agnostic content, tool-specific entry points
 Each AI tool has its own instruction file name and location. The content across all of them is identical — only the filename differs. You keep the one you use and delete the rest.
@@ -53,34 +56,41 @@ Files prefixed with `_` (e.g. `_template.md`) are authoring scaffolds. They defi
 │   └── copilot-instructions.md        ← GitHub Copilot
 │
 └── docs/
-    ├── README.md                      ← Master knowledge manifest
+    ├── index.yaml                     ← AI navigation root (categories + triggers)
+    ├── README.md                      ← Human navigation root
     │
     ├── conventions/
-    │   ├── README.md                  ← Category manifest
+    │   ├── index.yaml                 ← AI category index
+    │   ├── README.md                  ← Human category overview
     │   ├── _template.md               ← Authoring template
     │   └── [topic].md
     │
     ├── adr/
+    │   ├── index.yaml
     │   ├── README.md
     │   ├── _template.md
     │   └── [NNN-title].md
     │
     ├── domain/
+    │   ├── index.yaml
     │   ├── README.md
     │   ├── _template.md
     │   └── [area].md
     │
     ├── toolchain/
+    │   ├── index.yaml
     │   ├── README.md
     │   ├── _template.md
     │   └── [tool].md
     │
     ├── architecture/
+    │   ├── index.yaml
     │   ├── README.md
     │   ├── _template.md
     │   └── [principle].md
     │
     └── specs/
+        ├── index.yaml
         ├── README.md
         ├── _template.md
         └── [feature-name].md
@@ -134,8 +144,8 @@ Every category has a `_template.md`. Always copy it (never edit it directly) whe
 cp docs/specs/_template.md docs/specs/user-authentication.md
 ```
 
-### Step 6 — Keep manifests up to date
-When you add a new document to a category, update the `README.md` frontmatter in that category to include the new file. This is how the AI assistant discovers that the document exists.
+### Step 6 — Keep indexes up to date
+When you add a new document to a category, update the `index.yaml` in that category to include the new file with its `covers` keywords. This is how the AI assistant discovers that the document exists. Also update the category `README.md` so human contributors can find it too.
 
 ---
 
@@ -151,4 +161,4 @@ Specs are not authoritative references — they describe intent for a specific f
 
 ## Contributing to This Template
 
-If you improve this structure in your own project and believe the change would benefit others, consider opening a PR against the original template repository. Changes to `_template.md` files and `README.md` manifests are especially welcome.
+If you improve this structure in your own project and believe the change would benefit others, consider opening a PR against the original template repository. Changes to `_template.md` files, `index.yaml` navigation indexes, and `README.md` human guides are especially welcome.

@@ -1,37 +1,9 @@
----
-version: "1.0"
-last_updated: "YYYY-MM-DD"
-categories:
-  conventions:
-    path: "docs/conventions/README.md"
-    triggers: ["code", "style", "lint", "format", "naming", "test", "convention"]
-    status: active
-  adr:
-    path: "docs/adr/README.md"
-    triggers: ["architecture", "decision", "pattern", "structure", "why", "approach"]
-    status: active
-  architecture:
-    path: "docs/architecture/README.md"
-    triggers: ["principle", "clean architecture", "solid", "design", "layer", "dependency"]
-    status: active
-  domain:
-    path: "docs/domain/README.md"
-    triggers: ["feature", "business logic", "entity", "rule", "domain"]
-    status: active
-  specs:
-    path: "docs/specs/README.md"
-    triggers: ["spec", "feature spec", "implement", "requirement", "scope"]
-    status: active
-  toolchain:
-    path: "docs/toolchain/README.md"
-    triggers: ["build", "deploy", "ci", "cd", "docker", "pipeline", "tooling"]
-    status: active
----
+> **Human navigation.** AI agents: use `docs/index.yaml` — do not read this file for navigation.
 
 # Contributor Knowledge Base
 
 This directory contains the knowledge base for all contributors — human and AI alike.
-Start here to identify what knowledge exists and where to find it.
+Browse the categories below to understand what knowledge exists and where to find it.
 Load only the category and files relevant to your current task.
 
 ## Categories
@@ -63,7 +35,7 @@ Load when: modifying build config, deployment process, or local dev environment 
 ---
 
 ## Navigation Rules
-1. Read this file first to identify the relevant category
-2. Read the category `README.md` to find the specific document
+1. Browse the category folders to identify what knowledge is relevant to your task
+2. Open the category `README.md` for an overview of documents in that area
 3. Load only what is needed for the current task
-4. Never load `_template.md` files — these are authoring scaffolds, not knowledge sources
+4. Never use `_template.md` files as knowledge sources — these are authoring scaffolds only

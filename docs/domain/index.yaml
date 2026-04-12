@@ -1,0 +1,5 @@
+category: domain
+last_updated: "YYYY-MM-DD"
+documents:
+  - path: "docs/domain/example-area.md"
+    covers: ["TODO: key concepts this file explains"]

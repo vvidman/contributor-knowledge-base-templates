@@ -1,14 +1,4 @@
----
-category: conventions
-last_updated: "YYYY-MM-DD"
-documents:
-  - file: typescript.md
-    covers: ["types", "generics", "interfaces", "enums", "nullability", "strict mode"]
-  - file: testing.md
-    covers: ["unit tests", "integration tests", "mocking", "coverage", "naming"]
-  - file: git.md
-    covers: ["commit messages", "branch naming", "PR structure", "review etiquette"]
----
+> **Human navigation.** AI agents: use `docs/conventions/index.yaml` — do not read this file for navigation.
 
 # Conventions
 
@@ -33,4 +23,4 @@ Load when: committing code, opening a PR, reviewing history.
 
 ## Adding a New Convention Document
 Copy `_template.md` to a new file named after the topic (e.g. `error-handling.md`).
-Add the new file to the `documents` list in this README's frontmatter.
+Add the new file to the `documents` list in `index.yaml`.

@@ -1,0 +1,5 @@
+category: adr
+last_updated: "YYYY-MM-DD"
+documents:
+  - path: "docs/adr/001-example.md"
+    covers: ["example decision", "TODO: keywords describing this ADR's topic"]

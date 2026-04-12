@@ -1,12 +1,4 @@
----
-category: specs
-last_updated: "YYYY-MM-DD"
-documents:
-  - file: example-feature.md
-    title: "Example Feature"
-    status: draft
-    date: "YYYY-MM-DD"
----
+> **Human navigation.** AI agents: use `docs/specs/index.yaml` — do not read this file for navigation.
 
 # Feature Specifications
 
@@ -18,21 +10,17 @@ Once a feature is fully implemented and merged, its spec is kept for historical 
 
 ## Status Vocabulary
 - `draft` — being written, not ready for implementation
-- `ready` — approved and ready for implementation
-- `in-progress` — implementation has started
-- `done` — feature is implemented and merged
+- `ready` — approved, implementation can begin
+- `in-progress` — actively being implemented
+- `done` — implemented, merged, kept for reference only
 
 ## Documents
 
-| Title | Status | Date |
-|-------|--------|------|
-| Example Feature | draft | YYYY-MM-DD |
+### `example-feature.md`
+Example spec demonstrating structure and required fields.
 
 ---
 
 ## Adding a New Spec
-Copy `_template.md` to a new file named after the feature (e.g. `user-authentication.md`).
-Fill in all sections completely before marking the spec as `ready`.
-Add the new file to the `documents` table and frontmatter list in this README.
-
-> A spec marked `ready` must have no empty sections and no unresolved open questions.
+Copy `_template.md` to a new file named after the feature (e.g. `user-login.md`).
+Add the new file to the `documents` list in `index.yaml`.

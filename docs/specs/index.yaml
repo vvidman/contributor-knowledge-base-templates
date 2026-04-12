@@ -1,0 +1,5 @@
+category: specs
+last_updated: "YYYY-MM-DD"
+documents:
+  - path: "docs/specs/example-feature.md"
+    covers: ["TODO: keywords describing what this feature spec is about"]
